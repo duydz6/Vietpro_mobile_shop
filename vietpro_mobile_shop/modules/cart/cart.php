@@ -1,7 +1,7 @@
 
 <script>
-    function buyNow() {
-        document.getElenmentById('frm').submit();
+    function byNow() {
+        document.getElementById('frm').submit();
     }
 </script>
 
@@ -157,8 +157,8 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['mail']) && 
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'pvdktr08@gmail.com';
-        $mail->Password = 'Sktlol88';
+        $mail->Username = 'duydz1202@gmail.com'; //anhnhatdev2504
+        $mail->Password = 'aooetapcleuuisun'; //aooetapcleuuisun
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
@@ -183,7 +183,7 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['mail']) && 
 
         $mail->send();
         $str_body;
-        // header('location:index.php?page_layout=success');
+        header('location:index.php?page_layout=success');
     } catch (Exception $e) {
         $str_body;
         echo 'Message could not be sent. Maier Error: ', $mail->ErrorInfo;
@@ -206,13 +206,11 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['mail']) && 
             <div id="customer-add" class="col-lg-12 col-md-12 col-sm-12">
                 <input placeholder="Địa chỉ nhà riêng hoặc cơ quan (bắt buộc)" type="text" name="add" class="form-control" required>
             </div>
-            <input type="submit" name="sbm2">
-
         </div>
     </form>
     <div class="row">
         <div class="by-now col-lg-6 col-md-6 col-sm-12">
-            <a onclick="buyNoW();">
+            <a href="#" onclick="byNow();">
                 <b>Mua ngay</b>
                 <span>Giao hàng tận nơi siêu tốc</span>
                 </a>
